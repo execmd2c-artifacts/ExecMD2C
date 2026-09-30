@@ -1,0 +1,5 @@
+https://download.openmmlab.com/mmaction/recognition/tsn/tsn_r50_320p_1x1x8_50e_activitynet_video_rgb/tsn_r50_320p_1x1x8_50e_activitynet_video_rgb_20210301-7f8da0c6.pth
+https://download.openmmlab.com/mmaction/recognition/tsn/tsn_r50_320p_1x1x8_150e_activitynet_video_flow/tsn_r50_320p_1x1x8_150e_activitynet_video_flow_20200804-13313f52.pth
+https://download.openmmlab.com/mmaction/recognition/tsn/tsn_r50_320p_1x1x8_100e_kinetics400_rgb/tsn_r50_320p_1x1x8_100e_kinetics400_rgb_20200702-ef80e3d7.pth
+https://drive.google.com/drive/folders/1Q8yf2u8YWkva-apAxW_9_TzvLGuWZaix?usp=sharing
+https://drive.google.com/file/d/1wKx3qi52_UM8OFZ3KGW31DV5l_xE5JbA/view?usp=sharing

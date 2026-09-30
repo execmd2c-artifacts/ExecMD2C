@@ -1,0 +1,10 @@
+{"checkpoint": "/gpfswork/rech/pvn/uqn73qm/polarnet_release/10tasks-multi-model/seed0/ckpts/model_step_200000.pt", "task": "reach_target", "variation": 0, "num_demos": 500, "sr": 1.0000000000000007}
+{"checkpoint": "/gpfswork/rech/pvn/uqn73qm/polarnet_release/10tasks-multi-model/seed0/ckpts/model_step_200000.pt", "task": "push_button", "variation": 0, "num_demos": 500, "sr": 0.9880000000000008}
+{"checkpoint": "/gpfswork/rech/pvn/uqn73qm/polarnet_release/10tasks-multi-model/seed0/ckpts/model_step_200000.pt", "task": "slide_block_to_target", "variation": 0, "num_demos": 500, "sr": 0.9320000000000007}
+{"checkpoint": "/gpfswork/rech/pvn/uqn73qm/polarnet_release/10tasks-multi-model/seed0/ckpts/model_step_200000.pt", "task": "pick_and_lift", "variation": 0, "num_demos": 500, "sr": 0.9540000000000007}
+{"checkpoint": "/gpfswork/rech/pvn/uqn73qm/polarnet_release/10tasks-multi-model/seed0/ckpts/model_step_200000.pt", "task": "take_umbrella_out_of_umbrella_stand", "variation": 0, "num_demos": 500, "sr": 0.9780000000000008}
+{"checkpoint": "/gpfswork/rech/pvn/uqn73qm/polarnet_release/10tasks-multi-model/seed0/ckpts/model_step_200000.pt", "task": "pick_up_cup", "variation": 0, "num_demos": 500, "sr": 0.8380000000000006}
+{"checkpoint": "/gpfswork/rech/pvn/uqn73qm/polarnet_release/10tasks-multi-model/seed0/ckpts/model_step_200000.pt", "task": "take_money_out_safe", "variation": 0, "num_demos": 500, "sr": 0.7140000000000005}
+{"checkpoint": "/gpfswork/rech/pvn/uqn73qm/polarnet_release/10tasks-multi-model/seed0/ckpts/model_step_200000.pt", "task": "put_knife_on_chopping_board", "variation": 0, "num_demos": 500, "sr": 0.8600000000000007}
+{"checkpoint": "/gpfswork/rech/pvn/uqn73qm/polarnet_release/10tasks-multi-model/seed0/ckpts/model_step_200000.pt", "task": "stack_wine", "variation": 0, "num_demos": 500, "sr": 0.8020000000000006}
+{"checkpoint": "/gpfswork/rech/pvn/uqn73qm/polarnet_release/10tasks-multi-model/seed0/ckpts/model_step_200000.pt", "task": "put_money_in_safe", "variation": 0, "num_demos": 500, "sr": 0.8540000000000006}

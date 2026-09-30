@@ -1,0 +1,176 @@
+CMD_TRAILING_OPTS:
+- output_dir
+- /gpfswork/rech/pvn/uqn73qm/polarnet_release/10tasks-multi-model/seed0
+- DATASET.dataset_class
+- pre_pcd_keystep_stepwise
+- DATASET.taskvars
+- &id001
+  - pick_and_lift+0
+  - pick_up_cup+0
+  - put_knife_on_chopping_board+0
+  - put_money_in_safe+0
+  - push_button+0
+  - reach_target+0
+  - slide_block_to_target+0
+  - stack_wine+0
+  - take_money_out_safe+0
+  - take_umbrella_out_of_umbrella_stand+0
+- DATASET.in_memory
+- 'False'
+- n_workers
+- '8'
+- DATASET.data_dir
+- /gpfsscratch/rech/pvn/uqn73qm//10tasks_data/train/keysteps_pcd/seed0/
+- DATASET.instr_embed_file
+- /gpfsscratch/rech/pvn/uqn73qm//rlbench_instructions/taskvar_instrs/clip/
+- DATASET.exclude_overlength_episodes
+- '20'
+- num_train_steps
+- '200000'
+- save_steps
+- '10000'
+- MODEL.dropout
+- '0.0'
+- DATASET.color_drop
+- '0.0'
+- checkpoint_strict_load
+- 'False'
+- MODEL.num_trans_layers
+- '2'
+- train_batch_size
+- '8'
+- checkpoint
+- /gpfswork/rech/pvn/uqn73qm/pretrained_models/pointnext-s-c64-enc-dec-sameshape.pt
+- MODEL.pcd_encoder_cfg.width
+- '64'
+- MODEL.learnable_step_embedding
+- 'False'
+- MODEL.use_prev_action
+- 'True'
+- MODEL.pcd_encoder_cfg.in_channels
+- '10'
+DATASET:
+  add_pcd_noises: false
+  aug_rotate_pcd: 0.0
+  aug_shift_pcd: 0.0
+  camera_ids:
+  - 0
+  - 1
+  - 2
+  cameras:
+  - left_shoulder
+  - right_shoulder
+  - wrist
+  color_drop: 0.0
+  data_dir: /gpfsscratch/rech/pvn/uqn73qm//10tasks_data/train/keysteps_pcd/seed0/
+  dataset_class: pre_pcd_keystep_stepwise
+  exclude_overlength_episodes: 20
+  gripper_channel: false
+  in_memory: false
+  instr_embed_file: /gpfsscratch/rech/pvn/uqn73qm//rlbench_instructions/taskvar_instrs/clip/
+  is_training: true
+  max_demos_per_taskvar: null
+  max_steps_per_episode: 12
+  multi_instruction: true
+  npoints: 2048
+  num_workers: 0
+  only_success: false
+  pc_center: gripper
+  pc_radius_norm: true
+  pc_space: workspace_on_table
+  pcd_noises_std: 0.01
+  real_robot: false
+  remove_pcd_outliers: false
+  rot_resolution: 5
+  taskvars: *id001
+  use_color: true
+  use_discrete_rot: false
+  use_height: true
+  use_instr_embed: all
+  use_normal: true
+  voxel_size: 0.01
+MODEL:
+  cat_global_in_head: false
+  dropout: 0.0
+  heatmap_distance_weight: 1.0
+  heatmap_loss: false
+  heatmap_loss_weight: 1.0
+  heatmap_temp: 0.1
+  instr_embed_size: 512
+  learnable_step_embedding: false
+  max_steps: 25
+  model_class: PointCloudUNet
+  num_tasks: 1
+  num_trans_layers: 2
+  pcd_decoder_cfg:
+    layers: 2
+  pcd_encoder_cfg:
+    act_args:
+      act: relu
+      inplace: true
+    aggr_args:
+      feature_type: dp_fj
+    blocks:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    conv_args:
+      order: conv-norm-act
+    expansion: 4
+    group_args:
+      NAME: ballquery
+      normalize_dp: true
+    in_channels: 10
+    norm_args:
+      norm: bn
+    nsample: 32
+    radius: 0.05
+    radius_scaling: 2.5
+    reduction: max
+    sa_layers: 3
+    sa_use_res: true
+    strides:
+    - 1
+    - 2
+    - 2
+    - 2
+    - 2
+    width: 64
+  rot_resolution: 5
+  trans_hidden_size: 512
+  txt_attn_type: cross
+  use_discrete_rot: false
+  use_heatmap_max: false
+  use_instr_embed: all
+  use_max_action: false
+  use_pos_loss: true
+  use_prev_action: true
+SEED: 2023
+betas:
+- 0.9
+- 0.98
+checkpoint: /gpfswork/rech/pvn/uqn73qm/pretrained_models/pointnext-s-c64-enc-dec-sameshape.pt
+checkpoint_strict_load: false
+grad_norm: 5
+gradient_accumulation_steps: 1
+learning_rate: 0.0005
+local_rank: 0
+log_steps: 1000
+lr_sched: linear
+n_workers: 8
+num_epochs: 1600
+num_train_steps: 200000
+optim: adamw
+output_dir: /gpfswork/rech/pvn/uqn73qm/polarnet_release/10tasks-multi-model/seed0
+pin_mem: true
+rank: 0
+restart_epoch: 0
+resume_training: true
+save_steps: 10000
+train_batch_size: 8
+warmup_steps: 2000
+weight_decay: 0.001
+world_size: 1
+
